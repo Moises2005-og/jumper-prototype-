@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#game-board {
+    margin-top: 5%;
+    width: 500px;
+    height: 500px;
+    margin-left: 30%;
+    border: 1px solid grey;   
+    padding: 10px; 
+    position: relative;
+    overflow: hidden;
+}
+
+#player {
+    background-color: blue;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    bottom: 1px;
+    left: 1px;
+}
+
+#object {
+    background-color: red;
+    height: 80px;
+    width: 50px;
+    position: absolute;
+    bottom: 1px;
+    right: 1px;
+}
+
+.andar {
+    animation: animacao 2.5s infinite linear;
+}
+
+.jump {
+    animation: jump 2s;
+}
+
+@keyframes animacao {
+    from {
+        right: -50px;
+    }
+    to{
+        right: 100%;
+    }
+}
+
+@keyframes jump {
+    0%{
+        bottom: 0px;
+    }
+
+    50%{
+        bottom: 150px;
+    }
+
+    100% {
+        bottom: 0px;
+    }
+}
